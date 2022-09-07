@@ -71,7 +71,7 @@
                                  <a class="nav-link" href="blog.html">Blog</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="contact.html">Contact Us</a>
+                                 <a class="nav-link" href="contactos">Contact Us</a>
                               </li>
                               <li class="nav-item d_none">
                                  <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
@@ -259,44 +259,7 @@
          </div>
       </div>
       <!-- end testimonial -->
-      <!--  contact -->
-      <div class="contact">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2>Request A Call Back</h2>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-6">
-                  <form id="request" class="main_form">
-                     <div class="row">
-                        <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Name" type="type" name="Name"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus1" placeholder="Email" type="type" name="Email"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus1" placeholder="Message" type="type" Message="Name">
-                        </div>
-                        <div class="col-md-12">
-                           <button class="send_btn">Send</button>
-                        </div>
-                     </div>
-                  </form>
-               </div>
-               <div class="col-md-6">
-                  <div class="map">
-                     <figure><img src="images/map_img.png" alt="#"/></figure>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end contact -->
+      
       <!--  footer -->
       <footer>
          <div class="footer">

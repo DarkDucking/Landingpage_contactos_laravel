@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PaginaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +13,21 @@ use App\Http\Controllers\PaginaController;
 |
 */
 
-Route::get('/', [PaginaController::class, 'landingpage']);
+Route::get('/', function () {
+    return view('landingpage');
+});
 
-Route::get('/contactos/{contacto_id?}', [PaginaController::class, 'contactos']);
+Route::get('/contactos/{contacto_id?}', function ($contacto_id = null) {
+
+    if($contacto_id == '1234'){
+        $nombre = "Oscar Leonardo Cárdenas Ulloa";
+        $correo = "leo@test.com";
+    } else {
+        $nombre = null;
+        $correo = null;
+    }
+
+
+    return view('contactos', compact('nombre', 'correo'));
+})->name('contacto_url');
+
