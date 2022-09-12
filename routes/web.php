@@ -17,3 +17,4 @@ use App\Http\Controllers\PaginaController;
 Route::get('/', [PaginaController::class, 'landingpage']);
 
 Route::get('/contactos/{contacto_id?}', [PaginaController::class, 'contactos']);
+Route::post('/contactos_form', [PaginaController::class, 'contactos_form']);

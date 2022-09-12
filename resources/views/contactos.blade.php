@@ -9,10 +9,23 @@
 <body>
     <h1> Contactos </h1>
 
-    <form id="formulario">
-        <label for="nombre">Nombre <input type="text" name="nombre" id="nombre" value={{ $nombre ?? '  ' }} required></label><br>
-        <label for="correo">Correo <input type="email" name="correo" id="correo" value={{ $correo ?? '  ' }} required></label><br>
-        <label for="comentario">Comentario <input type="text" name="comentario" id="comentario" required></label><br>
+    <form id="formulario" action="/contactos_form" method="post">
+        @csrf
+        <label for="nombre">Nombre <input type="text" name="nombre" id="nombre" value="{{ old('nombre') ?? $nombre }}"></label>
+        @error('nombre')
+            <i>{{ $message }}</i>
+        @enderror
+        <br>
+        <label for="correo">Correo <input type="text" name="correo" id="correo" value="{{ old('correo') ?? $correo }}"></label>
+        @error('correo')
+            <i>{{ $message }}</i>
+        @enderror
+        <br>
+        <label for="comentario">Comentario <input type="text" name="comentario" id="comentario" value="{{ old('comentario') }}"></label>
+        @error('comentario')
+            <i>{{ $message }}</i>
+        @enderror
+        <br>
         <button type="submit">Enviar</button>
     </form>
     <br>

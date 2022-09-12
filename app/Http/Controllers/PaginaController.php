@@ -24,4 +24,17 @@ class PaginaController extends Controller
     
         return view('contactos', compact('nombre', 'correo'));
     }
+
+    public function contactos_form(Request $request)
+    {
+        //recibe info
+        $request->validate([
+            'nombre' => 'required',
+            'correo' => ['required', 'email'],
+            'comentario' => 'required',
+        ]);
+        
+        echo 'jala';
+
+    }
 }
