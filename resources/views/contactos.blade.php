@@ -20,12 +20,5 @@
         <label for="codigo">Codigo <input type="text" name="codigo" id="codigo" placeholder="opcional"></label><br>
         <button type="submit">Enviar Codigo</button>
     </form>
-
-    <?php
-        if(!empty($_GET['codigo'])){
-        
-            Route::redirect('/contactos/{contacto_id?}', '/contactos/{codigo?}', 301);
-        }
-    ?>
 </body>
 </html>
