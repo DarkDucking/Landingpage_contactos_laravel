@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PaginaController extends Controller
 {
@@ -35,6 +36,17 @@ class PaginaController extends Controller
         ]);
         
         echo 'jala';
+
+        DB::table('contactos')->insert([
+            'nombre' => $request->nombre,
+            'correo' => $request->correo,
+            'comentario' => $request->comentario,
+
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        return redirect ('/contactos');
 
     }
 }
