@@ -47,7 +47,7 @@ class PaginaController extends Controller
             'updated_at' => now(),
         ]);
 
-        return redirect ('/contactos');
+        return redirect ('/contacto');
 
     }
 }

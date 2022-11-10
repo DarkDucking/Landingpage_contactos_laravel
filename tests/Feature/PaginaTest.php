@@ -15,7 +15,7 @@ class PaginaTest extends TestCase
      */
     public function test_pagina_contacto()
     {
-        $response = $this->get('/contactos');
+        $response = $this->get('/contacto');
 
         $response->assertSeeText(['Nombre','Correo','Comentario']);
 
@@ -25,7 +25,7 @@ class PaginaTest extends TestCase
     /** @test */
     public function prellenado_form()
     {
-        $response = $this->get('/contactos/1234');
+        $response = $this->get('/contacto/1234');
 
         $response->assertStatus(200);
         $this->assertEquals('Oscar Leonardo Cárdenas Ulloa', $response['nombre']);
@@ -35,7 +35,7 @@ class PaginaTest extends TestCase
     /** @test */
     public function validacion_formulario()
     {
-        $response = $this->post('/contactos', [
+        $response = $this->post('/contacto', [
             'nombre' => 'fafafafaf',
             'correo' => 'CorreoNo@Valido.com',
             'comentario' => 'Comsaaaaa',
