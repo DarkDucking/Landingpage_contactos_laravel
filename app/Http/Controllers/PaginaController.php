@@ -28,15 +28,16 @@ class PaginaController extends Controller
 
     public function contactos_form(Request $request)
     {
-        //recibe info
+        //recibe info y valida
         $request->validate([
-            'nombre' => 'required',
-            'correo' => ['required', 'email'],
-            'comentario' => 'required',
+            'nombre' => 'required|min:5',
+            'correo' => 'required|email',
+            'comentario' => 'required|min:5',
         ]);
         
         echo 'jala';
 
+        //agrega info a la BD
         DB::table('contactos')->insert([
             'nombre' => $request->nombre,
             'correo' => $request->correo,
